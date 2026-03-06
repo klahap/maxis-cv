@@ -12,7 +12,7 @@
 
 #show "GitHub": name => box[
   #box(image(
-    "github.svg",
+    "icons/github.svg",
     height: 0.7em,
   ))
   #name
@@ -20,7 +20,7 @@
 
 #show "LinkedIn": name => box[
   #box(image(
-    "linkedin.svg",
+    "icons/linkedin.svg",
     height: 0.7em,
   ))
   #name

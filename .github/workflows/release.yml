@@ -19,11 +19,13 @@ jobs:
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
 
-      - name: Compile PDF for German
-        run: typst compile --input jsonFile=data-de.json main.typ cv-de.pdf
-
-      - name: Compile PDF for English
-        run: typst compile --input jsonFile=data-en.json main.typ cv-en.pdf
+      - name: Compile PDF
+        run: |
+          set -euo pipefail
+          for file in translations/*.json; do
+            translation="$(basename "$file" .json)"
+            typst compile --input jsonFile="${file}" main.typ "cv-${translation}.pdf"
+          done
 
       - name: Release
         uses: softprops/action-gh-release@v2

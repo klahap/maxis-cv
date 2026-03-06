@@ -19,7 +19,11 @@ jobs:
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
 
-      - name: Compile PDF
+      - name: Read Typst version
+        id: typst_version
+        run: echo "version=$(typst --version)" >> "$GITHUB_OUTPUT"
+
+      - name: Compile PDFs with Typst
         run: ./compile.sh
 
       - name: Release
@@ -27,5 +31,7 @@ jobs:
         with:
           draft: false
           prerelease: false
+          body: |
+            > Generated with `${{ steps.typst_version.outputs.version }}`
           files: "*.pdf"
           fail_on_unmatched_files: true

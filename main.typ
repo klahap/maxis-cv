@@ -1,6 +1,19 @@
+#let data = json(sys.inputs.jsonFile)
+
 #set page(
   paper: "a4",
   margin: 2cm,
+  footer: [
+    #text(fill: gray)[
+      v0.0.1
+    ]
+    #h(1fr)
+    #text(fill: gray)[
+      #link("https://github.com/maximilian-hammerl/cv/releases")[
+        #data.downloadCv GitHub
+      ]
+    ]
+  ]
 )
 
 #set text(
@@ -45,8 +58,6 @@
     ],
   )
 ]
-
-#let data = json(sys.inputs.jsonFile)
 
 #grid(
   columns: (26%, 74%),

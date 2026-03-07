@@ -54,7 +54,8 @@
         "technologies": [
           "TypeScript (Deno, Vue.js)",
           "Kotlin (Spring)",
-          "PostgreSQL"
+          "PostgreSQL",
+          "Supabase"
         ]
       },
       {
@@ -83,7 +84,7 @@
         ],
         "technologies": [
           "PHP (Symfony)",
-          "JavaScript (Vue.js, jQuery)",
+          "JavaScript (Vue.js, jQuery, Capacitor)",
           "MariaDB"
         ]
       },

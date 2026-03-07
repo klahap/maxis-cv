@@ -57,8 +57,28 @@
       #rect(width: 3pt, height: 1em, fill: accent)
     ],
     [
-      #text(weight: "bold", size: 12pt)[
-        #upper[
+      #align(horizon)[
+        #text(weight: "bold", size: 12pt)[
+          #upper[
+            #title
+          ]
+      ]
+      ]
+    ],
+  )
+]
+
+#let section-subtitle(title) = [
+  #grid(
+    columns: (2pt, 1fr),
+    gutter: 4pt,
+    align: (start, start),
+    [
+      #rect(width: 2pt, height: 1em, fill: accent)
+    ],
+    [
+      #align(horizon)[
+        #text(weight: "bold", size: 11pt)[
           #title
         ]
       ]
@@ -131,7 +151,7 @@
     #section-title(data.workExperience.title)
 
     #for company in data.workExperience.companies [
-      *#company.name*
+      #section-subtitle(company.name)
 
       #grid(
         columns: (25%, 75%),

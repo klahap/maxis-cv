@@ -117,11 +117,11 @@
   ],
 
   [
-    #section-title("PROFIL")
+    #section-title(data.profile.title)
 
-    Platzhalter
+    #data.profile.text
 
-    #v(26pt)
+    #v(8pt)
 
     #section-title(data.workExperience.title)
 
@@ -151,8 +151,6 @@
 
       #v(8pt)
     ]
-
-    #v(8pt)
 
     #section-title(data.education.title)
 

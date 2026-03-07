@@ -23,6 +23,10 @@
       }
     ]
   },
+  "profile": {
+    "title": "Profil",
+    "text": "Als Senior Software Engineer bringe ich Full-Stack-Erfahrung mit und habe meine größten fachlichen Stärken im Backend, in der Softwarearchitektur und in der Entwicklung belastbarer Systemlandschaften. Besonders motivieren mich komplexe Projekte in interdisziplinären Teams, in denen technische Tiefe, klare Kommunikation und nachhaltige Lösungen gefragt sind."
+  },
   "workExperience": {
     "title": "Berufserfahrung",
     "companies": [

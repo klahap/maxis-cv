@@ -117,13 +117,15 @@
         "from": "04/2021",
         "to": "03/2023",
         "title": "Master of Science, Computer Science",
-        "institution": "University of Augsburg"
+        "institution": "University of Augsburg",
+        "grading": "ECTS credits: 85/120, provisional grade: 1.20"
       },
       {
         "from": "10/2016",
         "to": "03/2021",
         "title": "Bachelor of Science, Computer Science",
-        "institution": "University of Passau"
+        "institution": "University of Passau",
+        "grading": "ECTS credits: 173/180, provisional grade: 2.50"
       }
     ]
   }

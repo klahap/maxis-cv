@@ -89,9 +89,7 @@
 #grid(
   columns: (22%, 75%),
   gutter: 3%,
-  [
-        Platzhalter für Bild
-  ],
+  [],
 
   [
     #text(size: 28pt, weight: "bold")[
@@ -189,8 +187,10 @@
       ..data.education.steps.map(step => (
         step.from + [ \- ] + step.to,
         text(weight: "bold")[#step.title]
+        + [ \- ]
+        + step.institution
         + [ \ ]
-        + step.institution,
+        + step.grading,
       )).flatten(),
     )
   ]

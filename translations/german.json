@@ -117,13 +117,15 @@
         "from": "04/2021",
         "to": "03/2023",
         "title": "Master of Science, Informatik",
-        "institution": "Universität Augsburg"
+        "institution": "Universität Augsburg",
+        "grading": "ECTS-Punkte: 85/120, vorläufige Note: 1.20"
       },
       {
         "from": "10/2016",
         "to": "03/2021",
         "title": "Bachelor of Science, Informatik",
-        "institution": "Universität Passau"
+        "institution": "Universität Passau",
+        "grading": "ECTS-Punkte: 173/180, vorläufige Note: 2.50"
       }
     ]
   }

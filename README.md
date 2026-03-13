@@ -6,9 +6,10 @@ typesetting system designed as an alternative to LaTeX.
 ## Structure
 
 - `main.typ` - Main CV document
+- `compile.sh` - Build script to generate the CV PDFs for all translations
 - `translations/` - Language-specific content (German and English)
+- `fonts/` - Fonts used in the CV
 - `icons/` - Icons used in the CV
-- `compile.sh` - Build script
 
 ## Download
 

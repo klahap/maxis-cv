@@ -8,6 +8,7 @@ typesetting system designed as an alternative to LaTeX.
 - `main.typ` - Main CV document
 - `compile.sh` - Build script to generate the CV PDFs for all translations
 - `translations/` - Language-specific content (German and English)
+- `images/` - Images used in the CV
 - `fonts/` - Fonts used in the CV
 - `icons/` - Icons used in the CV
 
@@ -24,6 +25,7 @@ This repository uses multiple licenses:
 - The Typst template and build script are licensed under the [MIT License](LICENSE-template.md). This includes:
   `main.typ`, `compile.sh`, and other generic template/build files unless noted otherwise.
 - The personal CV content is not open source and is [All Rights Reserved](LICENSE-content.md). This includes: All files
-  containing CV text/content such as the translation JSON files, generated PDF files, and other personal assets.
+  containing CV text/content such as the image files, translation JSON files, generated PDF files, and other personal
+  assets.
 - Fonts, icons, and other third-party assets are subject to their own upstream licenses and are not relicensed by this
   repository.

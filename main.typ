@@ -47,7 +47,7 @@
   #name
 ]
 
-#let accent = rgb("#2f6fb3")
+#let primaryColor = rgb(50, 110, 180)
 
 #let section-title(title) = [
   #grid(
@@ -55,7 +55,7 @@
     gutter: 8pt,
     align: (start, start),
     [
-      #rect(width: 3pt, height: 1em, fill: accent)
+      #rect(width: 3pt, height: 1em, fill: primaryColor)
     ],
     [
       #align(horizon)[
@@ -75,7 +75,7 @@
     gutter: 4pt,
     align: (start, start),
     [
-      #rect(width: 2pt, height: 1em, fill: accent)
+      #rect(width: 2pt, height: 1em, fill: primaryColor)
     ],
     [
       #align(horizon)[
@@ -90,15 +90,31 @@
 #grid(
   columns: (22%, 76%),
   gutter: 2%,
-  [],
+  [
+      #rect(
+        inset: 0pt,
+        stroke: 2pt + primaryColor,
+      )[
+        #image(
+          "images/profile-picture.jpg",
+          width: 90%,
+        )
+      ]
+  ],
 
   [
     #text(size: 28pt, weight: "bold")[
       #smallcaps("Maximilian Hammerl")
     ] \
-    #text(size: 12pt, fill: accent, weight: "bold")[
+    #text(size: 12pt, fill: primaryColor, weight: "bold")[
       #smallcaps("Senior Software Engineer")
     ]
+
+    #v(4pt)
+
+    #section-title(data.profile.title)
+
+    #data.profile.text
   ],
 
   [
@@ -145,12 +161,6 @@
   ],
 
   [
-    #section-title(data.profile.title)
-
-    #data.profile.text
-
-    #v(4pt)
-
     #section-title(data.workExperience.title)
 
     #for company in data.workExperience.companies [

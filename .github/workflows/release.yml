@@ -16,12 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Install font
-        run: |
-          mkdir -p ~/.fonts
-          cp fonts/inria-sans/* ~/.fonts/
-          fc-cache -f -v
-
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
 

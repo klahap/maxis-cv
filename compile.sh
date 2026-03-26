@@ -7,6 +7,7 @@ release_version="${RELEASE_VERSION:-dev}"
 for file in translations/*.json; do
   translation="$(basename "$file" .json)"
   typst compile \
+    --font-path ./fonts \
     --input jsonFile="$file" \
     --input releaseVersion="$release_version" \
     main.typ \

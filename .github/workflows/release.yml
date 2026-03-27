@@ -33,7 +33,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TYPST_VERSION: ${{ steps.typst_version.outputs.version }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" *.pdf \
+          gh release create "${GITHUB_REF_NAME}" dist/*.pdf \
             --title "Release ${GITHUB_REF_NAME}" \
             --generate-notes \
             --notes "> Generated with \`${TYPST_VERSION}\`"

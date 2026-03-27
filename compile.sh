@@ -11,5 +11,5 @@ for file in translations/*.json; do
     --input jsonFile="$file" \
     --input releaseVersion="$release_version" \
     main.typ \
-    "cv-${translation}.pdf"
+    "dist/cv-${translation}.pdf"
 done

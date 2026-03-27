@@ -29,11 +29,11 @@ jobs:
         run: ./compile.sh
 
       - name: Release
-        uses: softprops/action-gh-release@v2
-        with:
-          draft: false
-          prerelease: false
-          body: |
-            > Generated with `${{ steps.typst_version.outputs.version }}`
-          files: "*.pdf"
-          fail_on_unmatched_files: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TYPST_VERSION: ${{ steps.typst_version.outputs.version }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" *.pdf \
+            --title "Release ${GITHUB_REF_NAME}" \
+            --generate-notes \
+            --notes "> Generated with \`${TYPST_VERSION}\`"

@@ -1,5 +1,5 @@
-#let json-file = sys.inputs.at("jsonFile", default: "translations/german.json")
-#let data = json(json-file)
+#let data = yaml(sys.inputs.at("translationFile", default: "content/translations/german.yaml"))
+#let general = yaml("content/general.yaml")
 #let release-version = sys.inputs.at("releaseVersion", default: "dev")
 
 #set page(
@@ -12,7 +12,7 @@
     ]
     #h(1fr)
     #text(fill: gray)[
-      #link("https://github.com/maximilian-hammerl/cv/releases")[
+      #link("https://github.com/" + general.github-name + "/cv/releases")[
         #data.downloadCv GitHub
       ]
     ]
@@ -104,10 +104,10 @@
 
   [
     #text(size: 28pt, weight: "bold")[
-      #smallcaps("Maximilian Hammerl")
+      #smallcaps(general.full-name)
     ] \
     #text(size: 12pt, fill: primaryColor, weight: "bold")[
-      #smallcaps("Senior Software Engineer")
+      #smallcaps(general.job)
     ]
 
     #v(4pt)
@@ -121,15 +121,15 @@
     #section-title(data.social.title)
 
     *LinkedIn* \
-    #link("https://www.linkedin.com/in/maximilian-hammerl-09aa69196/")[
-      Maximilian Hammerl
+    #link("https://www.linkedin.com/in/" + general.linkedin-name)[
+      #general.full-name
     ]
 
     #v(4pt)
 
     *GitHub* \
-    #link("https://github.com/maximilian-hammerl")[
-      maximilian-hammerl
+    #link("https://github.com/" + general.github-name)[
+      #general.github-name
     ]
 
     #v(8pt)
@@ -137,12 +137,12 @@
     #section-title(data.contact.title)
 
     *#data.contact.email* \
-    #link("mailto:maximilian@hammerl.dev")
+    #link("mailto:" + general.email)
 
     #v(4pt)
 
     *#data.contact.phone* \
-    #link("tel:+49 151 41463744")
+    #link("tel:" + general.tel)
 
     #v(8pt)
 
@@ -170,7 +170,7 @@
         columns: (25%, 75%),
         gutter: 10pt,
         ..company.positions.map(position => (
-          if position.to != "" [
+          if position.to != "" and position.to != none [
             #position.from \- #position.to
           ] else [
             #position.from

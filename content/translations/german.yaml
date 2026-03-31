@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=./schema.yaml
 downloadCv: Zur neuesten Version auf
 tasks: Aufgaben
 technologies: Technologien
@@ -27,7 +28,6 @@ workExperience:
     - name: Smart Cyber Security GmbH
       positions:
         - from: 01/2026
-          to: ''
           title: Senior Software Engineer
         - from: 01/2024
           to: 12/2025

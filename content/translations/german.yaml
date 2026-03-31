@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./schema.yaml
+# yaml-language-server: $schema=../translations-schema.yaml
 downloadCv: Zur neuesten Version auf
 tasks: Aufgaben
 technologies: Technologien

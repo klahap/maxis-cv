@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./schema.yaml
+# yaml-language-server: $schema=../translations-schema.yaml
 downloadCv: To latest version on
 tasks: Tasks
 technologies: Technologies

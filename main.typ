@@ -170,7 +170,7 @@
         columns: (25%, 75%),
         gutter: 10pt,
         ..company.positions.map(position => (
-          if position.to != "" and position.to != none [
+          if "to" in position and position.to != none and position.to != "" [
             #position.from \- #position.to
           ] else [
             #position.from

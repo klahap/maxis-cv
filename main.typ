@@ -12,7 +12,7 @@
     ]
     #h(1fr)
     #text(fill: gray)[
-      #link("https://github.com/" + general.github-name + "/cv/releases")[
+      #link("https://github.com/" + general.githubName + "/cv/releases")[
         #data.downloadCv GitHub
       ]
     ]
@@ -96,7 +96,7 @@
         stroke: 2pt + primaryColor,
       )[
         #image(
-          "images/profile-picture.jpg",
+          "content/images/profile-picture.jpg",
           width: 90%,
         )
       ]
@@ -104,10 +104,10 @@
 
   [
     #text(size: 28pt, weight: "bold")[
-      #smallcaps(general.full-name)
+      #smallcaps(general.fullName)
     ] \
     #text(size: 12pt, fill: primaryColor, weight: "bold")[
-      #smallcaps(general.job)
+      #smallcaps(general.jobTitle)
     ]
 
     #v(4pt)
@@ -121,15 +121,15 @@
     #section-title(data.social.title)
 
     *LinkedIn* \
-    #link("https://www.linkedin.com/in/" + general.linkedin-name)[
-      #general.full-name
+    #link("https://www.linkedin.com/in/" + general.linkedinName)[
+      #general.fullName
     ]
 
     #v(4pt)
 
     *GitHub* \
-    #link("https://github.com/" + general.github-name)[
-      #general.github-name
+    #link("https://github.com/" + general.githubName)[
+      #general.githubName
     ]
 
     #v(8pt)
@@ -137,12 +137,12 @@
     #section-title(data.contact.title)
 
     *#data.contact.email* \
-    #link("mailto:" + general.email)
+    #link("mailto:" + general.emailAddress)
 
     #v(4pt)
 
     *#data.contact.phone* \
-    #link("tel:" + general.tel)
+    #link("tel:" + general.phoneNumber)
 
     #v(8pt)
 

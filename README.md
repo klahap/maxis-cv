@@ -5,12 +5,12 @@ typesetting system designed as an alternative to LaTeX.
 
 ## Structure
 
-- `main.typ` - Main CV document
-- `compile.sh` - Build script to generate the CV PDFs for all translations
-- `content/` - General and language-specific content such as texts and images (German and English)
-- `fonts/` - Fonts used in the CV
-- `icons/` - Icons used in the CV
-- `dist/` - Generated PDFs
+- [`main.typ`](main.typ) - Main CV document
+- [`compile.sh`](compile.sh) - Build script to generate the CV PDFs for all translations
+- [`content/`](content/) - General and language-specific content such as texts and images (German and English)
+- [`fonts/`](fonts/) - Fonts used in the CV
+- [`icons/`](icons/) - Icons used in the CV
+- [`dist/`](dist/) - Generated PDFs
 
 ## Download
 

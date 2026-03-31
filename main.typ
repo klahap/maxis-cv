@@ -121,7 +121,7 @@
     #section-title(data.social.title)
 
     *LinkedIn* \
-    #link("https://www.linkedin.com/in/" + general.linkedinName)[
+    #link("https://www.linkedin.com/in/" + general.linkedInName)[
       #general.fullName
     ]
 

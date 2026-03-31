@@ -10,6 +10,7 @@ typesetting system designed as an alternative to LaTeX.
 - `content/` - General and language-specific content such as texts and images (German and English)
 - `fonts/` - Fonts used in the CV
 - `icons/` - Icons used in the CV
+- `dist/` - Generated PDFs
 
 ## Download
 
